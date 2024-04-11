@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction Form</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }  
+        h1 {
+            color: #fff;
+            margin: 70px;
+            text-align:center;
+        }
+        form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <h1><i class="fas fa-home"></i>Loan Prediction Form</h1>
+    <form action="/predict" method="post">
+        <label for="ApplicantIncome">Applicant Income:</label>
+        <input type="text" id="ApplicantIncome" name="ApplicantIncome"><br>
+
+        <label for="CoapplicantIncome">Coapplicant Income:</label>
+        <input type="text" id="CoapplicantIncome" name="CoapplicantIncome"><br>
+
+        <label for="LoanAmount">Loan Amount:</label>
+        <input type="text" id="LoanAmount" name="LoanAmount"><br>
+
+        <label for="Loan_Amount_Term">Loan Amount Term:</label>
+        <input type="text" id="Loan_Amount_Term" name="Loan_Amount_Term"><br>
+
+        <label for="CreditHistory">Credit History:</label>
+        <input type="text" id="CreditHistory" name="CreditHistory"><br>
+
+        <label for="Gender">Gender (Male):</label>
+        <input type="text" id="Gender" name="Gender"><br>
+
+        <label for="Married">Married (Yes):</label>
+        <input type="text" id="Married" name="Married"><br>
+
+        <label for="Dependents_1">Dependents (1):</label>
+        <input type="text" id="Dependents_1" name="Dependents_1"><br>
+
+        <label for="Dependents_2">Dependents (2):</label>
+        <input type="text" id="Dependents_2" name="Dependents_2"><br>
+
+        <label for="Dependents_3+">Dependents (3+):</label>
+        <input type="text" id="Dependents_3+" name="Dependents_3+"><br>
+
+        <label for="Education">Education (Not Graduate):</label>
+        <input type="text" id="Education" name="Education"><br>
+
+        <label for="Self_Employed">Self Employed (Yes):</label>
+        <input type="text" id="Self_Employed" name="Self_Employed"><br>
+
+        <label for="Property_Area_Semiurban">Property Area (Semiurban):</label>
+        <input type="text" id="Property_Area_Semiurban" name="Property_Area_Semiurban"><br>
+
+        <label for="Property_Area_Urban">Property Area (Urban):</label>
+        <input type="text" id="Property_Area_Urban" name="Property_Area_Urban"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
