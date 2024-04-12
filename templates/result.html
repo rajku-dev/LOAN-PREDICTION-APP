@@ -28,6 +28,24 @@
             font-size: 20px;
             margin-top: 30px;
         }
+        .button {
+            display: block;
+            width: 200px;
+            margin: auto;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -35,14 +53,12 @@
         <h1>Prediction Result</h1>
         <p>The loan status is: <strong id="predictionResult">{{ prediction_result }}</strong></p>
     </div>
+    <button class="button" onclick="redirectToPage()">Apply For Loan Again</button>
     <script>
-        var predictionResultElement = document.getElementById("predictionResult");
-        var predictionResult = "{{ prediction_result }}";
-        if (predictionResult === "Approved✅") {
-            predictionResultElement.style.color = "green";
-        } else {
-            predictionResultElement.style.color = "red";
+        function redirectToPage() {
+            window.location.href = "/";
         }
     </script>
+    
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Loan Prediction Form</title>
     <style>
         body {
-            background-color: #222;
+            background-color: #020024;
             color: #fff;
             font-family: Arial, sans-serif;
         }  
@@ -21,17 +21,16 @@
             border-radius: 10px;
             margin: 0 auto;
             width: 50%;
+            display: grid;
+            grid-gap: 10px;
         }
 
         label {
-            display: block;
-            margin-bottom: 10px;
             color: #fff;
         }
-        input[type="text"] {
+        input[type="text"], select {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
             border: none;
             border-radius: 5px;
             background-color: #444;
@@ -54,47 +53,56 @@
     <h1><i class="fas fa-home"></i>Loan Prediction Form</h1>
     <form action="/predict" method="post">
         <label for="ApplicantIncome">Applicant Income:</label>
-        <input type="text" id="ApplicantIncome" name="ApplicantIncome"><br>
+        <input type="text" id="ApplicantIncome" name="ApplicantIncome">
 
         <label for="CoapplicantIncome">Coapplicant Income:</label>
-        <input type="text" id="CoapplicantIncome" name="CoapplicantIncome"><br>
+        <input type="text" id="CoapplicantIncome" name="CoapplicantIncome">
 
         <label for="LoanAmount">Loan Amount:</label>
-        <input type="text" id="LoanAmount" name="LoanAmount"><br>
+        <input type="text" id="LoanAmount" name="LoanAmount">
 
         <label for="Loan_Amount_Term">Loan Amount Term:</label>
-        <input type="text" id="Loan_Amount_Term" name="Loan_Amount_Term"><br>
+        <input type="text" id="Loan_Amount_Term" name="Loan_Amount_Term">
 
         <label for="CreditHistory">Credit History:</label>
-        <input type="text" id="CreditHistory" name="CreditHistory"><br>
+        <input type="text" id="CreditHistory" name="CreditHistory">
 
         <label for="Gender">Gender (Male):</label>
-        <input type="text" id="Gender" name="Gender"><br>
+        <select name="Gender" id="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
 
-        <label for="Married">Married (Yes):</label>
-        <input type="text" id="Married" name="Married"><br>
+        <label for="Married">Married:</label>
+        <select id="Married" name="Married">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
 
-        <label for="Dependents_1">Dependents (1):</label>
-        <input type="text" id="Dependents_1" name="Dependents_1"><br>
+        <label for="Dependents">Dependents:</label>
+        <select id="Dependents" name="Dependents">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3+">3+</option>
+        </select>
 
-        <label for="Dependents_2">Dependents (2):</label>
-        <input type="text" id="Dependents_2" name="Dependents_2"><br>
+        <label for="Education">Education:</label>
+        <select id="Education" name="Education">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
 
-        <label for="Dependents_3+">Dependents (3+):</label>
-        <input type="text" id="Dependents_3+" name="Dependents_3+"><br>
+        <label for="Self_Employed">Self Employed:</label>
+        <select id="Self_Employed" name="Self_Employed">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
 
-        <label for="Education">Education (Not Graduate):</label>
-        <input type="text" id="Education" name="Education"><br>
-
-        <label for="Self_Employed">Self Employed (Yes):</label>
-        <input type="text" id="Self_Employed" name="Self_Employed"><br>
-
-        <label for="Property_Area_Semiurban">Property Area (Semiurban):</label>
-        <input type="text" id="Property_Area_Semiurban" name="Property_Area_Semiurban"><br>
-
-        <label for="Property_Area_Urban">Property Area (Urban):</label>
-        <input type="text" id="Property_Area_Urban" name="Property_Area_Urban"><br>
-
+        <label for="Property_Area">Property Area:</label>
+        <select id="Property_Area" name="Property_Area">
+            <option value="Urban">Urban</option>
+            <option value="Semiurban">Semiurban</option>
+        </select>
         <input type="submit" value="Submit">
     </form>
 </body>
